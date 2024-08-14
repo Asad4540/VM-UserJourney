@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VM </title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./all.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./adminlte.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+        integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c2def52ca0.js" crossorigin="anonymous"></script>
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #d9c077;
+            color: black;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<!--
+`body` tag options:
+
+  Apply one or more of the following classes to to the body tag
+  to get the desired effect
+
+  * sidebar-collapse
+  * sidebar-mini
+-->
+
+<body class="hold-transition sidebar-mini">
+
+    </div>
+
+
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color:#d9c077;">
+            <!-- Left navbar links -->
+
+
+
+
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+
+                    <div class="navbar-search">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+
+                                </div>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button
+                                class="btn btn-lg btn-primary" type="button">Logout
+
+                            </button>
+                        </form>
+                    </div>
+                </li>
+
+                <!-- Messages Dropdown Menu -->
+
+                <!-- Notifications Dropdown Menu -->
+
+
+
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4"
+            style="background-color:#d9c077;position:fixed;overflow:hidden">
+            <!-- Brand Logo -->
+            <a href="vm.php" style="background-color:white">
+                <center> <img src="https://we-vault.com/screens/AdminLTE-master/vm.png" alt="AdminLTE Logo"
+                        style="width:100%"></center>
+
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+
+
+                <!-- SidebarSearch Form -->
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item ">
+                            <a href="javascript:void(0);" class="nav-link" onclick="formToggle('importFrm');">
+                                <i style="color:black" class="nav-icon fa-solid fa-gauge"></i>
+                                <p style="color:#000">
+                                    Dashboard
+
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/widgets.html" class="nav-link">
+                                <i style="color:black" class="nav-icon fas fa-th"></i>
+                                <p style="color:#000">
+                                    List
+
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-open">
+                            <a href="vm.php" class="nav-link ">
+                                <i style="color:black" class="nav-icon fas fa-copy"></i>
+                                <p style="color:#fff">
+                                    Subscribers
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i style="color:black" class="nav-icon fas fa-envelope"></i>
+                                <p style="color:#000">
+                                    Campaigns
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i style="color:black" class="nav-icon fas fa-tree"></i>
+                                <p style="color:#000">
+                                    Surveys
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i style="color:black" class="nav-icon fas fa-file"></i>
+                                <p style="color:#000">
+                                    Autoresponders
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i style="color:black" class="nav-icon fas fa-comments"></i>
+                                <p style="color:#000">
+                                    Statistics
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i style="color:black" class="nav-icon fas fa-expand-arrows-alt"></i>
+                                <p style="color:#000">
+                                    Templates
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i style="color:black" class="nav-icon fas fa-th-large"></i>
+                                <p style="color:#000">
+                                    Forms
+                                </p>
+                            </a>
+
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 py-4" id="importFrm" style="display: none;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form class="form-inline" action="import-vmdata.php" method="post"
+                                        enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlFile1">Select file to import data</label>
+                                            <input class="form-control-file" type="file" name="file"
+                                                id="exampleFormControlFile1" required />
+                                        </div>
+                                        <input type="submit" class="btn btn-primary" name="importSubmit" value="IMPORT">
+                                    </form>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <form class="" action="clear-vmdata.php" method="post">
+                                        <a class="btn btn-info mt-2" href="sample.csv">Download Sample file</a>
+                                        <input type="submit" class="btn btn-danger mt-2" name="resetRecords"
+                                            value="RESET RECORDS">
+                                        <br><br>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!--     <div class="card">
+              <div class="card-header border-0">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-title">Online Store Visitors</h3>
+                  <a href="javascript:void(0);">View Report</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex">
+                  <p class="d-flex flex-column">
+                    <span class="text-bold text-lg">820</span>
+                    <span>Visitors Over Time</span>
+                  </p>
+                  <p class="ml-auto d-flex flex-column text-right">
+                    <span class="text-success">
+                      <i class="fas fa-arrow-up"></i> 12.5%
+                    </span>
+                    <span class="text-muted">Since last week</span>
+                  </p>
+                </div>
+                <!-- /.d-flex -->
+
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!-- /.card -->
+
+                            <div class="card">
+                                <div class="card-header border-0">
+                                    <h3 class="card-title"></h3>
+                                    <div class="card-tools">
+
+
+                                    </div>
+                                </div>
+                                <div class="card-body table-responsive p-0">
+                                    <table class="table table-striped table-valign-middle">
+                                        <thead style="background-color:#d9c077;">
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Domain</th>
+                                            <th class="emailth">E-mail</th>
+                                            <th>Country</th>
+
+                                            <th>IP Address</th>
+                                            <th>Optin Time</th>
+
+                                            <th>Actions</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="color:black;font-size:13px" contenteditable="true">Ramu
+                                                </td>
+                                                <td style="color:black;font-size:13px" contenteditable="true">Sonawane
+                                                </td>
+                                                <td style="color:black;font-size:13px" contenteditable="true">@gpabr.com
+                                                </td>
+                                                <td style="color:black;font-size:13px">
+                                                    <span data-toggle="modal" data-target="#subscriberModal"
+                                                        data-rowdata="1,Wanderson,Zuza,@gpabr.com,wanderson.zuza@gpabr.com,Brazil,200.192.174.69,2024-03-27 00:10:16"
+                                                        contenteditable="true">
+                                                        ramu.sonawane@gpabr.com </span>
+                                                </td>
+                                                <td style="color:black;font-size:13px" contenteditable="true">India
+                                                </td>
+                                                <td style="color:black;font-size:13px" contenteditable="true">
+                                                    200.192.174.69</td>
+                                                <td style="color:black;font-size:13px" contenteditable="true">2024-03-27
+                                                    00:10:16</td>
+                                                <td>
+                                                    <a id="openModal" href="#" title="" data-toggle="tooltip"
+                                                        data-original-title="Edit">
+                                                        <span data-toggle="modal" data-target="#mediumModal"
+                                                            data-rowdata="1,Ramu ,Sonawane,@gpabr.com,ramu.sonawane@gpabr.com,India,200.192.174.69,2024-03-27 00:10:16">
+                                                            Report View&nbsp;&nbsp;
+                                                            <!-- <i class="fa fa-sort-desc"></i> -->
+                                                        </span></a>
+
+                                                    <!--<a id="btn-getrowdata" >-->
+                                                    <!-- <span data-toggle="modal" data-target="#mediumModal" >-->
+                                                    <!--   Report View&nbsp;&nbsp;<i class="fa fa-sort-desc"></i></span></a>-->
+
+                                                </td>
+                                            </tr>
+                                </div>
+
+                                </tbody>
+                                </table>
+                                <br><Br>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+
+                        <!-- /.col-md-6 -->
+                        <div class="col-lg-6">
+                            <!--   <div class="card">
+              <div class="card-header border-0">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-title">Sales</h3>
+                  <a href="javascript:void(0);">View Report</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex">
+                  <p class="d-flex flex-column">
+                    <span class="text-bold text-lg">$18,230.00</span>
+                    <span>Sales Over Time</span>
+                  </p>
+                  <p class="ml-auto d-flex flex-column text-right">
+                    <span class="text-success">
+                      <i class="fas fa-arrow-up"></i> 33.1%
+                    </span>
+                    <span class="text-muted">Since last month</span>
+                  </p>
+                </div>
+                <!-- /.d-flex --
+
+                <div class="position-relative mb-4">
+                  <canvas id="sales-chart" height="200"></canvas>
+                </div>
+
+                <div class="d-flex flex-row justify-content-end">
+                  <span class="mr-2">
+                    <i class="fas fa-square text-primary"></i> This year
+                  </span>
+
+                  <span>
+                    <i class="fas fa-square text-gray"></i> Last year
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- /.card -->
+
+                            <!--   <div class="card">
+              <div class="card-header border-0">
+                <h3 class="card-title">Online Store Overview</h3>
+                <div class="card-tools">
+                  <a href="#" class="btn btn-sm btn-tool">
+                    <i class="fas fa-download"></i>
+                  </a>
+                  <a href="#" class="btn btn-sm btn-tool">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                  <p class="text-success text-xl">
+                    <i class="ion ion-ios-refresh-empty"></i>
+                  </p>
+                  <p class="d-flex flex-column text-right">
+                    <span class="font-weight-bold">
+                      <i class="ion ion-android-arrow-up text-success"></i> 12%
+                    </span>
+                    <span class="text-muted">CONVERSION RATE</span>
+                  </p>
+                </div>
+                <!-- /.d-flex --
+                <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                  <p class="text-warning text-xl">
+                    <i class="ion ion-ios-cart-outline"></i>
+                  </p>
+                  <p class="d-flex flex-column text-right">
+                    <span class="font-weight-bold">
+                      <i class="ion ion-android-arrow-up text-warning"></i> 0.8%
+                    </span>
+                    <span class="text-muted">SALES RATE</span>
+                  </p>
+                </div>
+                <!-- /.d-flex --
+                <div class="d-flex justify-content-between align-items-center mb-0">
+                  <p class="text-danger text-xl">
+                    <i class="ion ion-ios-people-outline"></i>
+                  </p>
+                  <p class="d-flex flex-column text-right">
+                    <span class="font-weight-bold">
+                      <i class="ion ion-android-arrow-down text-danger"></i> 1%
+                    </span>
+                    <span class="text-muted">REGISTRATION RATE</span>
+                  </p>
+                </div>
+                <!-- /.d-flex -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-md-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <div class="footer">
+        <p>&nbsp;</p>
+    </div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+    <div class="modal fade" id="mediumModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content" style="background-color:#d9c077">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mediumModalLabel">Prospect Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                    <div id="leadDetails" class="row"></div>
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subscriber Modal -->
+    <div class="modal fade" id="subscriberModal" tabindex="-1" role="dialog" aria-labelledby="subscriberModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content" style="background-color:#d9c077">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="subscriberModalLabel">Subscriber Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                    <div id="subscriberDetails" class="row"></div>
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="./jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="./adminlte.js"></script>
+
+    <!-- OPTIONAL SCRIPTS -->
+    <script src="./Chart.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="./dashboard3.js"></script>
+    <script src="./vm-helpers.js"></script>
+</body>
+<script>
+    function formToggle(ID) {
+        var element = document.getElementById(ID);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+<script>
+    $("#openModal").click(function () {
+        $('dd').attr('contenteditable', true);
+    });
+</script>
+
+</html>
